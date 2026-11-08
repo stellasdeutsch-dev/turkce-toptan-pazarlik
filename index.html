@@ -377,6 +377,15 @@ footer img{width:40px;height:40px;border-radius:11px}
 @media (prefers-reduced-motion:reduce){
   *,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
+
+.rvw{column-count:1;column-gap:14px}
+.rvc{break-inside:avoid;background:#fff;border-radius:var(--r);padding:8px;margin-bottom:14px;box-shadow:0 10px 34px rgba(36,38,34,.08);transition:translate .25s,box-shadow .25s}
+.rvc:hover{translate:0 -4px;box-shadow:0 18px 46px rgba(36,38,34,.14)}
+.rvc img{width:100%;border-radius:12px}
+.rvmore{margin-top:6px}
+.rvmore summary{list-style:none;display:flex;width:fit-content;margin:0 auto 20px;cursor:pointer}
+.rvmore summary::-webkit-details-marker{display:none}
+@media (min-width:700px){.rvw{column-count:2}}
 </style>
 <script defer src="assets/gsap-bundle.min.js"></script>
 </head>
@@ -665,6 +674,13 @@ footer img{width:40px;height:40px;border-radius:11px}
   <p class="lead rv">Открываешь свой и смотришь то, что уже можешь понять. Сериал без субтитров подождёт.</p>
   <div class="stairs" id="stairs" aria-label="Уровни от A1 до C1"><div>A1</div><div>A2</div><div>B1</div><div>B2</div><div>C1</div></div>
   <div class="soil"></div>
+</div></section>
+
+<section class="sec fog"><div class="wrap">
+  <h2 class="h2 rv">Что пишут те, <strong>кто уже внутри</strong></h2>
+  <p class="lead rv">Настоящие сообщения. Имена и аватарки я убрал: люди писали мне, а не интернету.</p>
+  <div class="rvw mt"><figure class="rvc rv"><img loading="lazy" src="media/r1.webp" alt="Отзыв о платформе, скриншот сообщения"></figure><figure class="rvc rv"><img loading="lazy" src="media/r8.webp" alt="Отзыв о платформе, скриншот сообщения"></figure><figure class="rvc rv"><img loading="lazy" src="media/r6.webp" alt="Отзыв о платформе, скриншот сообщения"></figure></div>
+  <details class="rvmore rv"><summary class="btn line">Показать ещё отзывы</summary><div class="rvw"><figure class="rvc rv"><img loading="lazy" src="media/r2.webp" alt="Отзыв о платформе, скриншот сообщения"></figure><figure class="rvc rv"><img loading="lazy" src="media/r5.webp" alt="Отзыв о платформе, скриншот сообщения"></figure><figure class="rvc rv"><img loading="lazy" src="media/r4.webp" alt="Отзыв о платформе, скриншот сообщения"></figure><figure class="rvc rv"><img loading="lazy" src="media/r0.webp" alt="Отзыв о платформе, скриншот сообщения"></figure><figure class="rvc rv"><img loading="lazy" src="media/r7.webp" alt="Отзыв о платформе, скриншот сообщения"></figure></div></details>
 </div></section>
 
 <section class="sec" id="cena"><div class="wrap">
@@ -990,6 +1006,8 @@ footer img{width:40px;height:40px;border-radius:11px}
   pills(vt,V.map(function(v){return v[1]}),setV);
   vc.textContent=nb(V[0][2]);
   new IntersectionObserver(function(e){vis=e[0].isIntersecting;if(vis){if(!vid.src)setV(0);if(!RM){var p=vid.play();p&&p.catch(function(){})}}else vid.pause()},{rootMargin:'300px 0px'}).observe(vid);
+
+  $$('.rvmore').forEach(function(d){d.addEventListener('toggle',function(){if(G)ScrollTrigger.refresh()})});
 
   /* honest timer: starts when the visitor reaches the ad, nothing changes at zero */
   var left=900,tEl=$('#timer'),tT=$('#timerT'),dT=$('#dockT'),tId=0,done=false;

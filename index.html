@@ -421,6 +421,28 @@ footer img{width:40px;height:40px;border-radius:11px}
   .vis-g.c3{grid-template-columns:repeat(3,1fr);max-width:none}
 }
 @media (min-width:700px){.vis-g.c5{grid-template-columns:repeat(5,1fr)}.vis-g.c5>:last-child{grid-column:auto}}
+
+.sec.cp{padding-top:22px;padding-bottom:22px}
+.cp-b{background:var(--gl);border-radius:var(--r);padding:20px 22px}
+.cp-m{height:8px;border-radius:99px;background:var(--w);overflow:hidden}
+.cp-m i{display:block;height:100%;border-radius:99px;background:var(--g)}
+.cp p{margin:12px 0 0;font-size:17px;line-height:1.5;color:var(--ink)}
+.cp strong{font-weight:700}
+.sec.mst{padding-top:44px;padding-bottom:0}
+.mst .wrap{display:grid;justify-items:center;gap:8px}
+.mst-ph{display:block;width:100%;max-width:320px;height:auto}
+.mst-t{justify-self:stretch;padding-bottom:48px}
+.mst .h2,.mst .lead{text-align:left;margin-left:0}
+.mst .lead{margin-top:18px}
+.mst-l{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:10px;font-size:17px;line-height:1.45;color:var(--ink)}
+.mst-l li{display:flex;gap:10px;align-items:flex-start}
+.mst-l .ic{flex:none;width:22px;height:22px;color:var(--g2);margin-top:2px}
+.mst .btn{margin-top:24px}
+@media(min-width:760px){
+  .sec.mst{padding-top:60px}
+  .mst .wrap{grid-template-columns:minmax(0,320px) minmax(0,1fr);justify-items:stretch;align-items:end;gap:52px}
+  .mst-t{padding-bottom:64px}
+}
 </style>
 <script defer src="assets/gsap-bundle.min.js"></script>
 </head>
@@ -500,6 +522,7 @@ footer img{width:40px;height:40px;border-radius:11px}
 
 <section class="sec" id="chto"><div class="wrap">
   <h2 class="h2 rv">Что такое <strong>разговор с поставщиком</strong></h2>
+  <p class="lead">Ниже придут синие платья вместо красных. Что надо было сказать на складе, станет ясно в конце разбора.</p>
   <div class="story">
     <p class="nar rv">Ты в Мертере. Приходишь на склад. Говоришь, мне нужно триста платьев.</p>
     <div class="msg rv"><span lang="tr">Hoş geldiniz. Çay içer misiniz?<small lang="ru">Добро пожаловать. Чай будете?</small></span><button class="say" data-say="Hoş geldiniz. Çay içer misiniz?" aria-label="Послушать"><svg class="ic"><use href="#i-say"/></svg></button></div>
@@ -564,6 +587,7 @@ footer img{width:40px;height:40px;border-radius:11px}
   <div class="dots"></div>
 </div></div></div></section>
 
+<section class="sec cp"><div class="wrap"><div class="cp-b"><div class="cp-m" aria-hidden="true"><i style="width:39%"></i></div><p><strong>Больше трети разбора позади.</strong> Главная фраза разобрана по слоям. Дальше волшебное "если": я тебе объём, ты мне цену.</p></div></div></section>
 <section class="sec"><div class="wrap">
   <h2 class="h2 rv">-abil или -ebil: <strong>выбирает последняя гласная</strong></h2>
   <p class="lead rv">После a, ı, o, u будет -abil. После e, i, ö, ü будет -ebil. Вариантов два. Запомнить можно за чаем.</p>
@@ -635,6 +659,7 @@ footer img{width:40px;height:40px;border-radius:11px}
   </div>
 </div></section>
 
+<section class="sec cp"><div class="wrap"><div class="cp-b"><div class="cp-m" aria-hidden="true"><i style="width:68%"></i></div><p><strong>Две трети разбора позади.</strong> Пять шагов и волшебное "если" уже есть. Дальше восемь ошибок и что на самом деле значит <span class="tt-w" lang="tr">hallederiz</span>.</p></div></div></section>
 <section class="sec" id="oshibki"><div class="wrap">
   <h2 class="h2 rv">Ошибки, на которых <strong>уже обжигались</strong></h2>
   <p class="lead rv">Восемь мест, где спотыкаются русскоязычные. Открой и проверь себя.</p>
@@ -680,6 +705,18 @@ footer img{width:40px;height:40px;border-radius:11px}
 </div></section>
 
 <!-- ad -->
+<section class="sec mst"><div class="wrap">
+  <img class="mst-ph" src="media/ph-bridge.webp" alt="" width="359" height="521" loading="lazy">
+  <div class="mst-t">
+    <h2 class="h2">Платья приедут красные, <strong>если условия записаны</strong></h2>
+    <ul class="mst-l">
+      <li><svg class="ic"><use href="#i-check"/></svg><span>Спросить цену за единицу, образец и срок теперь можно без посредника.</span></li>
+      <li><svg class="ic"><use href="#i-check"/></svg><span>На <span class="tt-w" lang="tr">hallederiz</span> теперь есть ответ: <span class="tt-w" lang="tr">Ne zaman?</span></span></li>
+    </ul>
+    <p class="lead">Это была одна тема. Остальные на платформе: 36 гайдов по работе, 128 по грамматике, 1716 материалов. $30 один раз.</p>
+    <a class="btn" href="#cena">Узнать цену</a>
+  </div>
+</div></section>
 <section class="sec dk" id="platforma"><div class="wrap">
   <h2 class="h2 rv">Чай допит. <strong>Перехожу к цене</strong></h2>
   <p class="lead rv">Ты полстраницы пьёшь мой чай. По турецким правилам пора говорить о деле. Да, дальше реклама. Гайд был бесплатный, можно закрывать.</p>

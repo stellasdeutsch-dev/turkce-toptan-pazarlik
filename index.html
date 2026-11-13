@@ -443,6 +443,17 @@ footer img{width:40px;height:40px;border-radius:11px}
   .mst .wrap{grid-template-columns:minmax(0,320px) minmax(0,1fr);justify-items:stretch;align-items:end;gap:52px}
   .mst-t{padding-bottom:64px}
 }
+
+/* 3D renders */
+.island{max-width:980px;width:100%;margin:auto auto 0;padding-top:10px}
+.g-island{display:block;width:100%;height:auto;animation:isl 6s ease-in-out infinite alternate}
+@keyframes isl{from{translate:0 0}to{translate:0 -8px}}
+.isl-tags{position:absolute;left:22%;right:22%;top:60%;display:flex;justify-content:space-between;gap:4px;animation:isl 6s ease-in-out infinite alternate}
+.isl-tags span{background:#fff;color:var(--g3);font-weight:700;font-size:clamp(11px,1.6vw,16px);line-height:1;padding:6px 9px;border-radius:7px}
+.secpic{display:block;width:min(78%,360px);height:auto;margin:6px auto 0}
+.rescol{display:flex;flex-direction:column;gap:12px;min-width:0}
+.formpic{display:block;width:100%;height:auto;margin-top:auto}
+@media (max-width:699px){.island{margin:auto -18px 0;width:auto}.isl-tags{left:18%;right:18%}}
 </style>
 <script defer src="assets/gsap-bundle.min.js"></script>
 </head>
@@ -498,25 +509,8 @@ footer img{width:40px;height:40px;border-radius:11px}
     </div>
   </div>
   <div class="island" aria-hidden="true">
-    <svg viewBox="0 0 1100 330" role="presentation">
-      <g id="cl1" fill="#fff"><ellipse cx="170" cy="70" rx="90" ry="26"/><ellipse cx="230" cy="52" rx="60" ry="26"/><ellipse cx="120" cy="56" rx="44" ry="20"/></g>
-      <g id="cl2" fill="#fff"><ellipse cx="920" cy="58" rx="86" ry="24"/><ellipse cx="860" cy="44" rx="54" ry="22"/><ellipse cx="970" cy="42" rx="42" ry="18"/></g>
-      <path d="M90 196h920l-34 56-60 22-40 44H270l-44-44-74-20Z" fill="#6B4A2E"/>
-      <path d="M126 236h848l-30 30-46 14H220l-58-16Z" fill="#5A3E27"/>
-      <path d="M270 290h480l-26 26H300Z" fill="#49B4EA"/>
-      <rect x="80" y="178" width="940" height="26" rx="13" fill="#62BC4D"/>
-      <g id="shop">
-        <rect x="430" y="82" width="248" height="98" fill="#fff"/>
-        <path d="M416 82h276l-16-36H432Z" fill="#62BC4D"/>
-        <rect x="456" y="108" width="62" height="72" fill="#E7F5E1"/><rect x="540" y="108" width="112" height="46" fill="#E3F3FC"/>
-        <g id="sign"><rect x="470" y="14" width="168" height="44" rx="8" fill="#242622"/><text x="554" y="45" font-family="M,sans-serif" font-weight="700" font-size="25" text-anchor="middle" fill="#fff" lang="tr">TOPTAN</text></g>
-      </g>
-      <g fill="#E2C49B"><rect x="716" y="122" width="62" height="58" rx="4"/><rect x="786" y="138" width="46" height="42" rx="4"/><rect x="738" y="82" width="48" height="40" rx="4"/></g>
-      <g fill="#C9A679"><rect x="742" y="122" width="10" height="58"/><rect x="804" y="138" width="9" height="42"/><rect x="757" y="82" width="9" height="40"/></g>
-      <g fill="#3A8A2B"><path d="M250 180c-24-44-10-92 22-112 28 22 42 70 18 112Z"/></g><path d="M270 180V96" stroke="#E7F5E1" stroke-width="3"/>
-      <g fill="#62BC4D"><path d="M322 180c-12-26-8-52 12-66 16 16 22 44 10 66Z"/></g>
-      <g font-family="M,sans-serif" font-weight="700" font-size="20" fill="#fff" text-anchor="middle" lang="tr"><text x="400" y="232">yap</text><text x="510" y="232">abil</text><text x="614" y="232">ir</text><text x="706" y="232">mi</text><text x="810" y="232">siniz</text></g>
-    </svg>
+    <img class="g-island" src="media/g-island.webp" alt="" width="1500" height="737">
+    <div class="isl-tags" lang="tr"><span>yap</span><span>abil</span><span>ir</span><span>mi</span><span>siniz</span></div>
   </div>
 </section>
 
@@ -632,6 +626,7 @@ footer img{width:40px;height:40px;border-radius:11px}
 
 <section class="sec" id="slova"><div class="wrap">
   <h2 class="h2 rv">Слова <strong>для склада</strong></h2>
+  <img class="secpic rv" src="media/g-boxes.webp" alt="" width="900" height="571" loading="lazy">
   <div class="grid g2 g3 mt" id="specs"></div>
   <figure class="vis rv vis-s"><svg viewBox="0 0 340 236" role="img" aria-label="Склад: полки с коробками, на них подписи"><g data-in="d" ><rect x="116" y="2" width="108" height="34" rx="8" fill="#62BC4D" /><text x="170" y="26" font-size="18" font-weight="700" text-anchor="middle" fill="#fff" lang="tr">depo</text></g><rect x="20" y="44" width="300" height="8" rx="3" fill="#242622" /><rect x="20" y="122" width="300" height="8" rx="3" fill="#242622" /><rect x="20" y="200" width="300" height="8" rx="3" fill="#242622" /><rect x="20" y="38" width="8" height="188" rx="0" fill="#363A32" /><rect x="312" y="38" width="8" height="188" rx="0" fill="#363A32" /><g data-in="u" ><rect x="40" y="72" width="78" height="50" rx="3" fill="#84603D" /><path d="M40 91.0h78" stroke="#6B4A2E" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" /><text x="79.0" y="111.0" font-size="15" font-weight="700" text-anchor="middle" fill="#fff" lang="tr">koli</text><rect x="124" y="72" width="78" height="50" rx="3" fill="#9E7A52" /><path d="M124 91.0h78" stroke="#6B4A2E" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" /><text x="163.0" y="111.0" font-size="15" font-weight="700" text-anchor="middle" fill="#fff" lang="tr">stok</text><rect x="208" y="72" width="92" height="50" rx="3" fill="#84603D" /><path d="M208 91.0h92" stroke="#6B4A2E" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" /><text x="254.0" y="111.0" font-size="15" font-weight="700" text-anchor="middle" fill="#fff" lang="tr">numune</text></g><g data-in="u" ><rect x="40" y="150" width="78" height="50" rx="3" fill="#9E7A52" /><path d="M40 169.0h78" stroke="#6B4A2E" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" /><text x="79.0" y="189.0" font-size="15" font-weight="700" text-anchor="middle" fill="#fff" lang="tr">seri</text><rect x="124" y="150" width="78" height="50" rx="3" fill="#84603D" /><path d="M124 169.0h78" stroke="#6B4A2E" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" /><text x="163.0" y="189.0" font-size="15" font-weight="700" text-anchor="middle" fill="#fff" lang="tr">adet</text><rect x="208" y="150" width="92" height="50" rx="3" fill="#9E7A52" /><path d="M208 169.0h92" stroke="#6B4A2E" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" /><text x="254.0" y="189.0" font-size="15" font-weight="700" text-anchor="middle" fill="#fff" lang="tr">kargo</text></g></svg><div class="vis-cap"><p class="vis-kick">На складе считают штуками.</p><p class="muted"><span lang="tr">Adet</span>, штука. Слово маленькое, а звучишь как свой.</p></div></figure>
 </div></section>
@@ -646,7 +641,7 @@ footer img{width:40px;height:40px;border-radius:11px}
       <label class="fw"><span class="fl">Сколько штук?</span><select id="bn"><option value="0">100</option><option value="1" selected>500</option><option value="2">1000</option><option value="3">2000</option></select></label>
       <button class="btn blue full" type="submit">Получить фразу</button>
     </form>
-    <div class="result" id="bfr" aria-live="polite" style="margin-top:14px"></div>
+    <div class="rescol"><div class="result" id="bfr" aria-live="polite"></div><img class="formpic" src="media/g-truck.webp" alt="" width="1400" height="423" loading="lazy"></div>
   </div>
 </div></section>
 
@@ -805,7 +800,8 @@ footer img{width:40px;height:40px;border-radius:11px}
 <div class="dock" id="dock"><p>Платформа<span id="dockT">15:00</span></p><a class="btn" href="https://app.lava.top/products/2cdbb9f8-e65b-443e-8d2c-4fea4c121e41" target="_blank" rel="noopener">Купить</a></div>
 <div class="toast" id="toast" role="status"></div>
 
-<script defer>function appInit(){
+<script defer>window.__AUD={"hoş geldiniz çay içer misiniz":"a1_012.mp3","hallederiz":"a1_013.mp3","ne zaman":"a1_014.mp3","birim fiyat ne kadar":"a1_015.mp3","numune alabilir miyim":"a1_016.mp3","kolay gelsin":"a1_017.mp3","teşekkürler memnuniyetle":"a1_018.mp3","toptan satış yapıyor musunuz":"a1_019.mp3","minimum sipariş kaç adet":"a1_020.mp3","kdv dahil mi":"a1_021.mp3","fiyat biraz yüksek geldi":"a1_022.mp3","ödeme koşulları nedir":"a1_023.mp3","teslimat ne kadar sürer":"a1_024.mp3","anlaştık":"a1_025.mp3","bunu yazılı olarak gönderebilir misiniz":"a1_026.mp3","indirim yapabilir misiniz":"a1_027.mp3","fiyatı düşürebilir misiniz":"a1_028.mp3","peşin ödeyebilirim":"a1_029.mp3","yarın gelebilirim":"a1_030.mp3","bugün gönderebilir misiniz":"a1_031.mp3","yapabilirim":"a1_032.mp3","yapabiliriz":"a1_033.mp3","yapabilirsiniz":"a1_034.mp3","yapabilir miyim":"a1_035.mp3","yapabilir miyiz":"a1_036.mp3","yapabilir misiniz":"a1_037.mp3","yapamam":"a1_038.mp3","yapamayız":"a1_039.mp3","yapamazsınız":"a1_040.mp3","beş yüz adet elbise almak istiyorum":"a1_041.mp3","daha fazla alırsam fiyat düşer mi":"a1_042.mp3","peşin ödersem indirim yapar mısınız":"a1_043.mp3","toptan":"a1_044.mp3","perakende":"a1_045.mp3","adet":"a1_046.mp3","seri":"a1_047.mp3","beden":"a1_048.mp3","renk":"a1_049.mp3","kumaş":"a1_050.mp3","numune":"a1_051.mp3","defolu":"a1_052.mp3","stok":"a1_053.mp3","fiyat":"a1_054.mp3","birim fiyat":"a1_055.mp3","indirim":"a1_056.mp3","kdv":"a1_057.mp3","fatura":"a1_058.mp3","peşin":"a1_059.mp3","kapora":"a1_060.mp3","havale":"a1_061.mp3","son fiyat":"a1_062.mp3","pazarlık":"a1_063.mp3","sipariş":"a1_064.mp3","teslimat":"a1_065.mp3","kargo":"a1_066.mp3","koli":"a1_067.mp3","depo":"a1_068.mp3","tedarikçi":"a1_069.mp3","üretici":"a1_070.mp3","atölye":"a1_071.mp3","gümrük":"a1_072.mp3","sözleşme":"a1_073.mp3","beş yüz adet elbise için birim fiyat ne kadar":"a1_074.mp3","fiyatı ne kadar":"a1_075.mp3","500 elbise":"a1_076.mp3","bin adet":"a1_077.mp3","almak istiyorum":"a1_078.mp3","gönderebilir":"a1_079.mp3","bu fiyata veremem":"a1_080.mp3","bugün gönderemeyiz":"a1_081.mp3","ne zaman teslim edebilirsiniz":"a1_082.mp3","peşin ödeyebiliriz":"a1_083.mp3","bin adet alırız":"a1_084.mp3","iki bin adet alırız":"a1_085.mp3","beş yüz elbise":"a1_086.mp3","elbiseler güzel":"a1_087.mp3","alabilirim":"a1_088.mp3","alabiliriz":"a1_089.mp3","alabilirsiniz":"a1_090.mp3","alabilir miyim":"a1_091.mp3","alabilir miyiz":"a1_092.mp3","alabilir misiniz":"a1_093.mp3","alamam":"a1_094.mp3","alamayız":"a1_095.mp3","alamazsınız":"a1_096.mp3","verebilirim":"a1_097.mp3","verebiliriz":"a1_098.mp3","verebilirsiniz":"a1_099.mp3","verebilir miyim":"a1_100.mp3","verebilir miyiz":"a1_101.mp3","verebilir misiniz":"a1_102.mp3","veremem":"a1_103.mp3","veremeyiz":"a1_104.mp3","veremezsiniz":"a1_105.mp3","gönderebilirim":"a1_106.mp3","gönderebiliriz":"a1_107.mp3","gönderebilirsiniz":"a1_108.mp3","gönderebilir miyim":"a1_109.mp3","gönderebilir miyiz":"a1_110.mp3","gönderebilir misiniz":"a1_111.mp3","gönderemem":"a1_112.mp3","gönderemeyiz":"a1_113.mp3","gönderemezsiniz":"a1_114.mp3","yok fiyat ne":"a1_115.mp3","çay pahalı mı":"a1_116.mp3","çok pahalı olmaz":"a1_117.mp3","fiyat biraz yüksek geldi daha fazla alırsam düşer mi":"a1_118.mp3","tamam":"a1_119.mp3","birim fiyatımız on dolar":"a1_120.mp3","peşin ödersem sekiz buçuk olur mu":"a1_121.mp3","anlamadım":"a1_122.mp3","bin adet alırsanız dokuz dolar olur":"a1_123.mp3","tamam teşekkürler":"a1_124.mp3","inşallah":"a1_125.mp3","tamam hallederiz":"a1_126.mp3","bakarız":"a1_127.mp3"};
+function appInit(){
   var D=document,$=function(s,r){return (r||D).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||D).querySelectorAll(s))};
   var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
   var G=(window.gsap&&window.ScrollTrigger&&!RM)?window.gsap:null;
@@ -821,7 +817,7 @@ footer img{width:40px;height:40px;border-radius:11px}
   function loadV(){if(!('speechSynthesis' in window))return;var v=speechSynthesis.getVoices();trVoice=v.filter(function(x){return /^tr([-_]|$)/i.test(x.lang)})[0]||null}
   if('speechSynthesis' in window){loadV();speechSynthesis.onvoiceschanged=loadV}
   function toast(t){var el=$('#toast');el.textContent=t;el.classList.add('on');clearTimeout(toastT);toastT=setTimeout(function(){el.classList.remove('on')},3200)}
-  function say(t,btn){
+  function sayTTS(t,btn){
     if(!('speechSynthesis' in window)){toast('Этот браузер не умеет озвучивать текст.');return}
     speechSynthesis.cancel();
     var u=new SpeechSynthesisUtterance(t);u.lang='tr-TR';u.rate=.88;
@@ -829,6 +825,18 @@ footer img{width:40px;height:40px;border-radius:11px}
     else if(!warned){warned=true;toast('Турецкого голоса на устройстве нет. Браузер прочитает как сможет.')}
     if(btn){btn.classList.add('on');var off=function(){btn.classList.remove('on')};u.onend=off;u.onerror=off;setTimeout(off,6000)}
     speechSynthesis.speak(u);
+  }
+
+  var AUD=window.__AUD||{},curA=null;
+  function akey(t){return String(t).replace(/[.?!,]/g,'').replace(/\s+/g,' ').trim().replace(/I/g,'ı').replace(/İ/g,'i').toLowerCase()}
+  function say(t,btn){
+    var f=AUD[akey(t)];
+    if(!f){sayTTS(t,btn);return}
+    try{speechSynthesis.cancel()}catch(e){}
+    if(curA)curA.pause();
+    var a=new Audio('media/'+'a/'+f);curA=a;
+    if(btn){btn.classList.add('on');var off=function(){btn.classList.remove('on')};a.onended=off;a.onerror=off;a.onpause=off}
+    var p=a.play();if(p&&p.catch)p.catch(function(){sayTTS(t,btn)});
   }
   D.addEventListener('click',function(e){var b=e.target.closest('[data-say]');if(b){e.preventDefault();e.stopPropagation();say(b.getAttribute('data-say'),b)}});
   function sayBtn(t){return '<button type="button" class="say" data-say="'+esc(t)+'" aria-label="Послушать">'+SP+'</button>'}
